@@ -1,16 +1,32 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[][] arr = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+        int x = 834;
+        int[][] arr = { { 0, 6, 8, 9, 11 },
+                { 20, 22, 28, 29, 31 },
+                { 36, 38, 50, 61, 63 },
+                { 64, 66, 100, 122, 128 } };
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 4; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
+        if (searchInMatrix(arr, x)) {
+            System.out.println("YES");
+        }
+        else {
+            System.out.println("NO");
         }
     }
+
+    static boolean searchInMatrix(int[][] arr, int x)
+    {
+        int m = arr.length, n = arr[0].length;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (arr[i][j] == x)
+                    return true;
+            }
+        }
+        return false;
+    }
+
 }
