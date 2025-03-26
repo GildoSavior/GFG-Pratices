@@ -4,19 +4,13 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        int[][] arr = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
-
-        // Initializing a 2-D array with values
-        int[][] arr
-                = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-
-        // Accessing elements of 2-D array
-        System.out.println("First element of first row: "
-                + arr[0][0]);
-        System.out.println("Third element of second row: "
-                + arr[1][2]);
-        System.out.println("Second element of third row: "
-                + arr[2][1]);
-
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
